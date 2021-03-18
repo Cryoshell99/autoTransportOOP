@@ -1,0 +1,59 @@
+Filled container. 
+Container contains that elements:
+0: It is Bus : passenger capacity = 17,  Engine power: 1, Fuel consumption per 100 km = 2.447
+1275 Weight to Power ratio
+1: It is Bus : passenger capacity = 23,  Engine power: 2, Fuel consumption per 100 km = 2
+862.5 Weight to Power ratio
+2: It is Bus : passenger capacity = 16,  Engine power: 3, Fuel consumption per 100 km = 2
+400 Weight to Power ratio
+3: It is Car : max speed = 31,  Engine power: 4, Fuel consumption per 100 km = 2
+75 Weight to Power ratio
+4: It is Car : max speed = 3,  Engine power: 5, Fuel consumption per 100 km = 2.346
+60 Weight to Power ratio
+5: It is Truck : carrying capacity = 5,  Engine power: 6, Fuel consumption per 100 km = 2
+0.833333 Weight to Power ratio
+6: It is Truck : carrying capacity = 7,  Engine power: 7, Fuel consumption per 100 km = 2
+1 Weight to Power ratio
+7: It is Truck : carrying capacity = 4,  Engine power: 8, Fuel consumption per 100 km = 2
+0.5 Weight to Power ratio
+8: It is Bus : passenger capacity = 10,  Engine power: 11, Fuel consumption per 100 km = 12
+68.1818 Weight to Power ratio
+
+
+Soreted container. 
+Container contains that elements:
+0: It is Bus : passenger capacity = 17,  Engine power: 1, Fuel consumption per 100 km = 2.447
+1275 Weight to Power ratio
+1: It is Bus : passenger capacity = 23,  Engine power: 2, Fuel consumption per 100 km = 2
+862.5 Weight to Power ratio
+2: It is Bus : passenger capacity = 16,  Engine power: 3, Fuel consumption per 100 km = 2
+400 Weight to Power ratio
+3: It is Car : max speed = 31,  Engine power: 4, Fuel consumption per 100 km = 2
+75 Weight to Power ratio
+4: It is Bus : passenger capacity = 10,  Engine power: 11, Fuel consumption per 100 km = 12
+68.1818 Weight to Power ratio
+5: It is Car : max speed = 3,  Engine power: 5, Fuel consumption per 100 km = 2.346
+60 Weight to Power ratio
+6: It is Truck : carrying capacity = 7,  Engine power: 7, Fuel consumption per 100 km = 2
+1 Weight to Power ratio
+7: It is Truck : carrying capacity = 5,  Engine power: 6, Fuel consumption per 100 km = 2
+0.833333 Weight to Power ratio
+8: It is Truck : carrying capacity = 4,  Engine power: 8, Fuel consumption per 100 km = 2
+0.5 Weight to Power ratio
+
+Only Bus transports:
+0: It is Bus : passenger capacity = 17,  Engine power: 1, Fuel consumption per 100 km = 2.447
+1275 Weight to Power ratio
+1: It is Bus : passenger capacity = 23,  Engine power: 2, Fuel consumption per 100 km = 2
+862.5 Weight to Power ratio
+2: It is Bus : passenger capacity = 16,  Engine power: 3, Fuel consumption per 100 km = 2
+400 Weight to Power ratio
+3: 
+4: It is Bus : passenger capacity = 10,  Engine power: 11, Fuel consumption per 100 km = 12
+68.1818 Weight to Power ratio
+5: 
+6: 
+7: 
+8: 
+Empty container. 
+Container is empty!
