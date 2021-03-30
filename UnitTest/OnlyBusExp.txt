@@ -1,0 +1,10 @@
+
+Only Bus transports:
+0: It is Bus : passenger capacity = 9,  Engine power: 7, Fuel consumption per 100 km = 1
+96.4286 Weight to Power ratio
+1: It is Bus : passenger capacity = 3,  Engine power: 17, Fuel consumption per 100 km = 2.567
+13.2353 Weight to Power ratio
+2: It is Bus : passenger capacity = 4,  Engine power: 23, Fuel consumption per 100 km = 2
+13.0435 Weight to Power ratio
+3: It is Bus : passenger capacity = 5,  Engine power: 16, Fuel consumption per 100 km = 2
+23.4375 Weight to Power ratio

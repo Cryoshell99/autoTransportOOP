@@ -10,4 +10,7 @@ public:
 	void Out(ofstream& ofst); // вывод
 	float WPRatio();
 	Truck() {};
+
+	int GetmAbstractDT() { return mAbstractDT; }
+	void SetmAbstractDT(int mAbstractDT) { this->mAbstractDT = mAbstractDT; }
 };

@@ -11,4 +11,7 @@ public:
 	void OutBus(ofstream& ofst);
 	float WPRatio();
 	Bus() {} // создание без инициализации.
+
+	int GetmAbstractDT() { return mAbstractDT; }
+	void SetmAbstractDT(int mAbstractDT) { this->mAbstractDT = mAbstractDT; }
 };

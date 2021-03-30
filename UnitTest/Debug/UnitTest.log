@@ -1,0 +1,5 @@
+﻿  UnitTest.cpp
+D:\GitHub\autoTransportOOP\autoTransportOOP\Transport.h(22,30): warning C4244: return: преобразование "double" в "int", возможна потеря данных
+D:\GitHub\autoTransportOOP\autoTransportOOP\Container.cpp(94,13): warning C4101: temp: неиспользованная локальная переменная
+D:\GitHub\autoTransportOOP\UnitTest\UnitTest.cpp(30,19): warning C4244: инициализация: преобразование "int" в "float", возможна потеря данных
+  UnitTest.vcxproj -> D:\GitHub\autoTransportOOP\Debug\UnitTest.dll

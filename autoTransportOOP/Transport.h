@@ -14,6 +14,12 @@ class Transport
 		bool Compare(Transport& second);
 		void InCommon(ifstream& ifst);
 		void OutCommon(ofstream& ofst);
+
+		void SetmData(short int mData) { this->mData = mData; }
+		void SetfuelCons(int fuelConsumption) { this->fuelConsumption = fuelConsumption; }
+
+		short int GetmData() { return mData; }
+		int GetfuelCons() { return fuelConsumption; }
 	protected:
 		int mData;
 		double fuelConsumption;

@@ -1,0 +1,2 @@
+It is Bus : passenger capacity = 5,  Engine power: 100, Fuel consumption per 100 km = 12
+3.75 Weight to Power ratio
