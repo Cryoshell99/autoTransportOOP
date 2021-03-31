@@ -24,8 +24,6 @@ void Car::InData(vector<float>& tail)
 		return;
 	}
 	tail.erase(tail.begin() + 0);
-	//ifst >> tPower;
-	//InCommon(ifst);
 	InCommon(tail);
 };
 
