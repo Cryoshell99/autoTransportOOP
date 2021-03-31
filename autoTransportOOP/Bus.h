@@ -4,7 +4,7 @@
 class Bus : public Transport
 {
 	int mPower;
-	float mfuelConsumption;
+	float mFuelConsumption;
 public:
 	void inData(vector<float>& tail); // ввод
 	void Out(ofstream& ofst); // вывод

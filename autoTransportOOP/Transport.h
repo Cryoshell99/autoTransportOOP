@@ -18,12 +18,12 @@ class Transport
 		void outCommon(ofstream& ofst);
 
 		void setmData(short int mData) { this->mData = mData; }
-		void getmfuelConsumption(int mfuelConsumption) { this->mfuelConsumption = mfuelConsumption; }
+		void getmFuelConsumption(int mFuelConsumption) { this->mFuelConsumption = mFuelConsumption; }
 
 		short int getmData() { return mData; }
-		int getmfuelConsumption() { return mfuelConsumption; }
+		int getmFuelConsumption() { return mFuelConsumption; }
 	protected:
 		int mData;
-		float mfuelConsumption;
+		float mFuelConsumption;
 		bool mIncorrectType = false;
 };

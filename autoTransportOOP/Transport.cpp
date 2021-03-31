@@ -75,18 +75,18 @@ void Transport::inCommon(vector<float>& tail)
 	if (tail.size() == 2)
 	{
 		mData = tail[0];
-		mfuelConsumption = tail[1];
+		mFuelConsumption = tail[1];
 	}
 	else
 	{
 		mIncorrectType = true;
 		return;
 	}
-	//ifst >> mData >> mfuelConsumption;
+	//ifst >> mData >> mFuelConsumption;
 };
 void Transport::outCommon(ofstream& ofst)
 {
-	ofst << "Engine power = " << mData << ", Fuel consumption per 100 km = " << mfuelConsumption << endl;
+	ofst << "Engine power = " << mData << ", Fuel consumption per 100 km = " << mFuelConsumption << endl;
 	ofst << weightToPowerRatio() << " Weight to Power ratio" << endl<< endl;
 };
 

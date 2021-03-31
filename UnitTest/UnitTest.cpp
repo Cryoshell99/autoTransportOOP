@@ -71,10 +71,10 @@ namespace UnitTest
 				Bus expected;
 				expected.setmPower(9);
 				expected.setmData(7);
-				expected.getmfuelConsumption(2);
+				expected.getmFuelConsumption(2);
 				Assert::AreEqual(expected.getmPower(), actual.getmPower());
 				Assert::AreEqual(expected.getmData(), actual.getmData());
-				Assert::AreEqual(expected.getmfuelConsumption(), actual.getmfuelConsumption());
+				Assert::AreEqual(expected.getmFuelConsumption(), actual.getmFuelConsumption());
 			}
 		}
 
@@ -84,7 +84,7 @@ namespace UnitTest
 			Bus act;
 			act.setmPower(5);
 			act.setmData(100);
-			act.getmfuelConsumption(12);
+			act.getmFuelConsumption(12);
 
 			act.Out(fout);
 			fout.close();
