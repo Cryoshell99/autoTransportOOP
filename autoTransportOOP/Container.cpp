@@ -35,7 +35,7 @@ void Container::Out(ofstream& ofst)
 {
 	if (this->Next != nullptr)
 	{
-		ofst << "Container contains that elements:" << endl;
+		ofst << "Container contains that elements:" << endl << endl;
 		Container* temp;
 		temp = this;
 		int i = 0;
@@ -44,7 +44,7 @@ void Container::Out(ofstream& ofst)
 			ofst << i << ": ";
 			if (temp->L == NULL)
 			{
-				ofst << "Incorrect type of transport!!!" << endl;
+				ofst << "Incorrect type of Transport!" << endl << endl;
 			}
 			else
 			{
@@ -57,7 +57,6 @@ void Container::Out(ofstream& ofst)
 	else
 	{
 		ofst << "Container is empty!" << endl;
-
 	}
 }; // вывод
 
@@ -100,7 +99,7 @@ void Container::Sort()
 		flag = false;
 		do
 		{
-			if (current->L->Compare(*current->Next->L))
+			if (current->L->Compare(current->Next->L))
 			{
 				Swap(current, current->Next);
 				flag = true;
@@ -115,7 +114,8 @@ void Container::OutBus(ofstream& ofst)
 {
 	if (this->Next != nullptr)
 	{
-		ofst << endl << "Only Bus transports:" << endl;
+		ofst << endl << endl << "<< Only Bus transports >>" << endl;
+		ofst << "Container contains that elements:" << endl << endl;
 		Container* temp;
 		temp = this;
 		int i = 0;
@@ -124,7 +124,8 @@ void Container::OutBus(ofstream& ofst)
 			ofst << i << ": ";
 			if (temp->L == NULL)
 			{
-				ofst << "Incorrect type of transport!!!" << endl;
+				ofst << endl;
+				ofst << endl;
 			}
 			else
 			{
@@ -137,6 +138,5 @@ void Container::OutBus(ofstream& ofst)
 	else
 	{
 		ofst << "Container is empty!" << endl;
-
 	}
 }; // вывод

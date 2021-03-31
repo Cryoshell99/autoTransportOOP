@@ -19,11 +19,11 @@ int main(int argc, char* argv[])
 	cout << "Start" << endl;
 	Container cnt;
 	cnt.In(ifst);
-	ofst << "Filled container. " << endl;
+	ofst << "<< Filled container >>" << endl;
 	cnt.Out(ofst);
 
 	// Сортированный вывод
-	ofst << endl << endl << "Soreted container. " << endl;
+	ofst << endl << endl << "<< Soreted container >>" << endl;
 	cnt.Sort();
 	cnt.Out(ofst);
 
@@ -31,7 +31,7 @@ int main(int argc, char* argv[])
 	cnt.OutBus(ofst);
 
 	cnt.Clear();
-	ofst << "Empty container. " << endl;
+	//ofst << "Empty container. " << endl;
 	cnt.Out(ofst);
 	cout << "Stop" << endl;
 	system("pause");

@@ -3,46 +3,104 @@
 #include "Truck.h"
 #include "Car.h"
 
+#include <vector>
+#include <string>
+
 Transport* Transport::In(ifstream& ifst)
 {
-	int k, error1, error2;
+	//read full row
+	//and if it s ok send to InData(vector<float>)
 	Transport* tr;
-	ifst >> k;
-	switch (k)
+
+	float k;
+	bool flag = true;
+	vector<float> tail;
+	do
 	{
-	case 1:
-		tr = new Bus();
-		break;
-	case 2:
-		tr = new Truck();
-		break;
-	case 3:
-		tr = new Car();
-		break;
-	default:
-		ifst >> error1 >> error2;
+		ifst >> k;
+		if (ifst.fail())
+		{
+			//Восстановили поток
+			ifst.clear();
+			ifst.ignore(numeric_limits<streamsize>::max(), '\n');
+			flag = false;
+			break;
+		}
+		if (k >= 0)
+		{
+			tail.push_back(k);
+		}
+		else
+		{
+			ifst.ignore(numeric_limits<streamsize>::max(), '\n');
+			flag = false;
+			break;
+			//сделать окончание ввода до конца
+		}
+	} while (!ifst.eof() && ifst.peek() != '\n');//ifst.peek() != ' ' two space in a row
+	
+	if (flag && !tail.empty())
+	{
+		ifst.ignore(numeric_limits<streamsize>::max(), '\n');
+		switch ((int)tail[0])
+		{
+		case 1:
+			tr = new Bus();
+			break;
+		case 2:
+			tr = new Truck();
+			break;
+		case 3:
+			tr = new Car();
+			break;
+		default:
+			return NULL;
+		}
+		tail.erase(tail.begin() + 0);
+		tr->InData(tail);
+
+		if (tr->mIncorrectType)
+			return NULL;
+		else
+			return tr;
+	}
+	else
+	{
 		return NULL;
 	}
-	tr->InData(ifst);
-	return tr;
 };
 
-void Transport::InCommon(ifstream& ifst)
+void Transport::InCommon(vector<float>& tail)
 {
-	ifst >> mData >> fuelConsumption;
+	if (tail.size() == 2)
+	{
+		mData = tail[0];
+		fuelConsumption = tail[1];
+	}
+	else
+	{
+		mIncorrectType = true;
+		return;
+	}
+	//ifst >> mData >> fuelConsumption;
 };
 void Transport::OutCommon(ofstream& ofst)
 {
-	ofst << " Engine power: " << mData << ", Fuel consumption per 100 km = " << fuelConsumption << endl;
-	ofst << WPRatio() << " Weight to Power ratio" << endl;
+	ofst << "Engine power = " << mData << ", Fuel consumption per 100 km = " << fuelConsumption << endl;
+	ofst << WPRatio() << " Weight to Power ratio" << endl<< endl;
 };
 
-bool Transport::Compare(Transport& second)
+bool Transport::Compare(Transport* second)
 {
-	return WPRatio() < second.WPRatio();
+	if (this != NULL && second != NULL)
+	{
+		return WPRatio() < second->WPRatio();
+	}
+	return false;
+
 }
 
 void Transport::OutBus(ofstream& ofst)
 {
-	ofst << endl; //empty line
+	ofst << endl << endl; //empty line
 };

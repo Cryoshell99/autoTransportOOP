@@ -3,14 +3,14 @@
 
 class Truck : public Transport
 {
-	int mAbstractDT;
-	double fuelConsumption;
+	int tPower;
+	float fuelConsumption;
 public:
-	void InData(ifstream& ifst); // ввод
+	void InData(vector<float>& tail); // ввод
 	void Out(ofstream& ofst); // вывод
 	float WPRatio();
 	Truck() {};
 
-	int GetmAbstractDT() { return mAbstractDT; }
-	void SetmAbstractDT(int mAbstractDT) { this->mAbstractDT = mAbstractDT; }
+	int GettPower() { return tPower; }
+	void SettPower(int tPower) { this->tPower = tPower; }
 };

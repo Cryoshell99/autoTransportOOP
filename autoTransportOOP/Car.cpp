@@ -1,14 +1,37 @@
 #include "Car.h"
+#include <vector>
 
-void Car::InData(ifstream& ifst)
+void Car::InData(vector<float>& tail)
 {
-	ifst >> mAbstractDT;
-	InCommon(ifst);
+	if (tail.size() < 1)
+	{
+		mIncorrectType = true;
+		return;
+	}
+	else if (tail.size() > 3)
+	{
+		mIncorrectType = true;
+		return;
+	}
+
+	if (tail[0] > 0 || tail[0] < 490)
+	{
+		tPower = tail[0];
+	}
+	else
+	{
+		mIncorrectType = true;
+		return;
+	}
+	tail.erase(tail.begin() + 0);
+	//ifst >> tPower;
+	//InCommon(ifst);
+	InCommon(tail);
 };
 
 void Car::Out(ofstream& ofst)
 {
-	ofst << "It is Car : max speed = " << mAbstractDT
+	ofst << "It is Car, maximum speed = " << tPower
 		<< ", ";
 	OutCommon(ofst);
 };

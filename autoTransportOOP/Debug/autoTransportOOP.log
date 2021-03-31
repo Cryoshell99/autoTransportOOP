@@ -1,15 +1,5 @@
-﻿  Bus.cpp
-D:\GitHub\autoTransportOOP\autoTransportOOP\Transport.h(22,30): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-  Car.cpp
-D:\GitHub\autoTransportOOP\autoTransportOOP\Transport.h(22,30): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-  Container.cpp
-D:\GitHub\autoTransportOOP\autoTransportOOP\Transport.h(22,30): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-D:\GitHub\autoTransportOOP\autoTransportOOP\Container.cpp(94,13): warning C4101: temp: неиспользованная локальная переменная
-  Transport.cpp
-D:\GitHub\autoTransportOOP\autoTransportOOP\Transport.h(22,30): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-  Truck.cpp
-D:\GitHub\autoTransportOOP\autoTransportOOP\Transport.h(22,30): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-  autoTransportOOP.cpp
-D:\GitHub\autoTransportOOP\autoTransportOOP\Transport.h(22,30): warning C4244: return: преобразование "double" в "int", возможна потеря данных
-  Создание кода...
+﻿  Container.cpp
+D:\GitHub\autoTransportOOP\autoTransportOOP\Transport.h(21,67): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+D:\GitHub\autoTransportOOP\autoTransportOOP\Transport.h(24,30): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+D:\GitHub\autoTransportOOP\autoTransportOOP\Container.cpp(93,13): warning C4101: temp: неиспользованная локальная переменная
   autoTransportOOP.vcxproj -> D:\GitHub\autoTransportOOP\Debug\autoTransportOOP.exe
