@@ -110,7 +110,7 @@ void Container::Sort()
 	} while (flag);
 };
 
-void Container::OutBus(ofstream& ofst)
+void Container::outBus(ofstream& ofst)
 {
 	if (this->Next != nullptr)
 	{
@@ -129,7 +129,7 @@ void Container::OutBus(ofstream& ofst)
 			}
 			else
 			{
-				temp->L->OutBus(ofst);
+				temp->L->outBus(ofst);
 			}
 			temp = temp->Next;
 			i++;

@@ -9,7 +9,7 @@
 Transport* Transport::In(ifstream& ifst)
 {
 	//read full row
-	//and if it s ok send to InData(vector<float>)
+	//and if it s ok send to inData(vector<float>)
 	Transport* tr;
 
 	float k;
@@ -57,7 +57,7 @@ Transport* Transport::In(ifstream& ifst)
 			return NULL;
 		}
 		tail.erase(tail.begin() + 0);
-		tr->InData(tail);
+		tr->inData(tail);
 
 		if (tr->mIncorrectType)
 			return NULL;
@@ -70,37 +70,37 @@ Transport* Transport::In(ifstream& ifst)
 	}
 };
 
-void Transport::InCommon(vector<float>& tail)
+void Transport::inCommon(vector<float>& tail)
 {
 	if (tail.size() == 2)
 	{
 		mData = tail[0];
-		fuelConsumption = tail[1];
+		mfuelConsumption = tail[1];
 	}
 	else
 	{
 		mIncorrectType = true;
 		return;
 	}
-	//ifst >> mData >> fuelConsumption;
+	//ifst >> mData >> mfuelConsumption;
 };
-void Transport::OutCommon(ofstream& ofst)
+void Transport::outCommon(ofstream& ofst)
 {
-	ofst << "Engine power = " << mData << ", Fuel consumption per 100 km = " << fuelConsumption << endl;
-	ofst << WPRatio() << " Weight to Power ratio" << endl<< endl;
+	ofst << "Engine power = " << mData << ", Fuel consumption per 100 km = " << mfuelConsumption << endl;
+	ofst << weightToPowerRatio() << " Weight to Power ratio" << endl<< endl;
 };
 
 bool Transport::Compare(Transport* second)
 {
 	if (this != NULL && second != NULL)
 	{
-		return WPRatio() < second->WPRatio();
+		return weightToPowerRatio() < second->weightToPowerRatio();
 	}
 	return false;
 
 }
 
-void Transport::OutBus(ofstream& ofst)
+void Transport::outBus(ofstream& ofst)
 {
 	ofst << endl << endl; //empty line
 };

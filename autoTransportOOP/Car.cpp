@@ -1,7 +1,7 @@
 #include "Car.h"
 #include <vector>
 
-void Car::InData(vector<float>& tail)
+void Car::inData(vector<float>& tail)
 {
 	if (tail.size() < 1)
 	{
@@ -16,7 +16,7 @@ void Car::InData(vector<float>& tail)
 
 	if (tail[0] > 0 || tail[0] < 490)
 	{
-		tPower = tail[0];
+		mPower = tail[0];
 	}
 	else
 	{
@@ -24,17 +24,17 @@ void Car::InData(vector<float>& tail)
 		return;
 	}
 	tail.erase(tail.begin() + 0);
-	InCommon(tail);
+	inCommon(tail);
 };
 
 void Car::Out(ofstream& ofst)
 {
-	ofst << "It is Car, maximum speed = " << tPower
+	ofst << "It is Car, maximum speed = " << mPower
 		<< ", ";
-	OutCommon(ofst);
+	outCommon(ofst);
 };
 
-float Car::WPRatio()
+float Car::weightToPowerRatio()
 {
 	return (float)(4 * 75) / (float)mData;
 };

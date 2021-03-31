@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
 	cnt.Out(ofst);
 
 	// Фильтрованный вывод
-	cnt.OutBus(ofst);
+	cnt.outBus(ofst);
 
 	cnt.Clear();
 	//ofst << "Empty container. " << endl;

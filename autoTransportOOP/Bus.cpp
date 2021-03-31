@@ -1,7 +1,7 @@
 #include "Bus.h"
 #include <vector>
 
-void Bus::InData(vector<float>& tail)
+void Bus::inData(vector<float>& tail)
 {
 	if (tail.size() < 1)
 	{
@@ -16,7 +16,7 @@ void Bus::InData(vector<float>& tail)
 
 	if (tail[0] > 0 || tail[0] < 103)
 	{
-		tPower = tail[0];
+		mPower = tail[0];
 	}
 	else
 	{
@@ -24,23 +24,23 @@ void Bus::InData(vector<float>& tail)
 		return;
 	}
 	tail.erase(tail.begin() + 0);
-	InCommon(tail);
+	inCommon(tail);
 };
 
 void Bus::Out(ofstream& ofst)
 {
 
-	ofst << "It is Bus, passenger capacity = " << tPower
+	ofst << "It is Bus, passenger capacity = " << mPower
 		<< ", ";
-	OutCommon(ofst);
+	outCommon(ofst);
 };
 
-float Bus::WPRatio()
+float Bus::weightToPowerRatio()
 {
-	return (float)(75 * tPower) / (float)mData;
+	return (float)(75 * mPower) / (float)mData;
 };
 
-void Bus::OutBus(ofstream& ofst)
+void Bus::outBus(ofstream& ofst)
 {
 	Out(ofst);
 };

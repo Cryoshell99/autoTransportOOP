@@ -8,22 +8,22 @@ class Transport
 {
 	public:
 		static Transport* In(ifstream& ifst);
-		virtual void InData(vector<float>& tail) = 0; // ввод
+		virtual void inData(vector<float>& tail) = 0; // ввод
 		virtual void Out(ofstream& ofst) = 0;
-		virtual void OutBus(ofstream& ofst);
-		virtual float WPRatio() =0;
+		virtual void outBus(ofstream& ofst);
+		virtual float weightToPowerRatio() =0;
 		bool Compare(Transport* second);
 
-		void InCommon(vector<float>& tail);
-		void OutCommon(ofstream& ofst);
+		void inCommon(vector<float>& tail);
+		void outCommon(ofstream& ofst);
 
-		void SetmData(short int mData) { this->mData = mData; }
-		void SetfuelCons(int fuelConsumption) { this->fuelConsumption = fuelConsumption; }
+		void setmData(short int mData) { this->mData = mData; }
+		void getmfuelConsumption(int mfuelConsumption) { this->mfuelConsumption = mfuelConsumption; }
 
-		short int GetmData() { return mData; }
-		int GetfuelCons() { return fuelConsumption; }
+		short int getmData() { return mData; }
+		int getmfuelConsumption() { return mfuelConsumption; }
 	protected:
 		int mData;
-		float fuelConsumption;
+		float mfuelConsumption;
 		bool mIncorrectType = false;
 };

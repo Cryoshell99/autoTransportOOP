@@ -1,7 +1,7 @@
 #include "Truck.h"
 #include <vector>
 
-void Truck::InData(vector<float>& tail)
+void Truck::inData(vector<float>& tail)
 {
 	if (tail.size() < 1)
 	{
@@ -16,7 +16,7 @@ void Truck::InData(vector<float>& tail)
 
 	if (tail[0] > 0 || tail[0] < 450)
 	{
-		tPower = tail[0];
+		mPower = tail[0];
 	}
 	else
 	{
@@ -24,17 +24,17 @@ void Truck::InData(vector<float>& tail)
 		return;
 	}
 	tail.erase(tail.begin() + 0);
-	InCommon(tail);
+	inCommon(tail);
 };
 
 void Truck::Out(ofstream& ofst)
 {
-	ofst << "It is Truck, carrying capacity = " << tPower
+	ofst << "It is Truck, carrying capacity = " << mPower
 		<< ", ";
-	OutCommon(ofst);
+	outCommon(ofst);
 };
 
-float Truck::WPRatio()
+float Truck::weightToPowerRatio()
 {
-	return (float)(tPower) / (float)mData;
+	return (float)(mPower) / (float)mData;
 };

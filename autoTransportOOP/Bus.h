@@ -3,15 +3,15 @@
 
 class Bus : public Transport
 {
-	int tPower;
-	float fuelConsumption;
+	int mPower;
+	float mfuelConsumption;
 public:
-	void InData(vector<float>& tail); // ввод
+	void inData(vector<float>& tail); // ввод
 	void Out(ofstream& ofst); // вывод
-	void OutBus(ofstream& ofst);
-	float WPRatio();
+	void outBus(ofstream& ofst);
+	float weightToPowerRatio();
 	Bus() {} // создание без инициализации.
 
-	int GettPower() { return tPower; }
-	void SettPower(int tPower) { this->tPower = tPower; }
+	int getmPower() { return mPower; }
+	void setmPower(int mPower) { this->mPower = mPower; }
 };

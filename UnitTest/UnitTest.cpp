@@ -21,41 +21,41 @@ namespace UnitTest
 	{
 	public:
 		
-		TEST_METHOD(WPRatioT)
+		TEST_METHOD(weightToPowerRatioT)
 		{
 			Truck transport;
-			transport.SetmData(25);
-			transport.SetmAbstractDT(25);
-			float actual = transport.WPRatio();
-			float expected = transport.GetmAbstractDT() / transport.GetmData();
+			transport.setmData(25);
+			transport.setmPower(25);
+			float actual = transport.weightToPowerRatio();
+			float expected = transport.getmPower() / transport.getmData();
 			Assert::AreEqual(expected, actual);
 		}
-		TEST_METHOD(WPRatioB)
+		TEST_METHOD(weightToPowerRatioB)
 		{
 			Bus transport;
-			transport.SetmData(25);
-			transport.SetmAbstractDT(25);
-			float actual = transport.WPRatio();
-			float expected = transport.GetmAbstractDT()*75 / transport.GetmData();
+			transport.setmData(25);
+			transport.setmPower(25);
+			float actual = transport.weightToPowerRatio();
+			float expected = transport.getmPower()*75 / transport.getmData();
 			Assert::AreEqual(expected, actual);
 		}
-		TEST_METHOD(WPRatioC)
+		TEST_METHOD(weightToPowerRatioC)
 		{
 			Car transport;
-			transport.SetmData(25);
-			//transport.SetmAbstractDT(25);
-			float actual = transport.WPRatio();
-			float expected = 4*75 / transport.GetmData();
+			transport.setmData(25);
+			//transport.setmPower(25);
+			float actual = transport.weightToPowerRatio();
+			float expected = 4*75 / transport.getmData();
 			Assert::AreEqual(expected, actual);
 		}
 		TEST_METHOD(TestCompareM)
 		{
 			Car transport_new;
 			Bus transport_old;
-			transport_new.SetmData(1);
-			transport_new.SetmAbstractDT(25);
-			transport_old.SetmData(1);
-			transport_old.SetmAbstractDT(25);
+			transport_new.setmData(1);
+			transport_new.setmPower(25);
+			transport_old.setmData(1);
+			transport_old.setmPower(25);
 			//75*1/25 < 75*4/25
 			bool actual = transport_new.Compare(transport_old);
 			bool expected = true;
@@ -67,14 +67,14 @@ namespace UnitTest
 			if (fin.is_open())
 			{
 				Bus actual;
-				actual.InData(fin);
+				actual.inData(fin);
 				Bus expected;
-				expected.SetmAbstractDT(9);
-				expected.SetmData(7);
-				expected.SetfuelCons(2);
-				Assert::AreEqual(expected.GetmAbstractDT(), actual.GetmAbstractDT());
-				Assert::AreEqual(expected.GetmData(), actual.GetmData());
-				Assert::AreEqual(expected.GetfuelCons(), actual.GetfuelCons());
+				expected.setmPower(9);
+				expected.setmData(7);
+				expected.getmfuelConsumption(2);
+				Assert::AreEqual(expected.getmPower(), actual.getmPower());
+				Assert::AreEqual(expected.getmData(), actual.getmData());
+				Assert::AreEqual(expected.getmfuelConsumption(), actual.getmfuelConsumption());
 			}
 		}
 
@@ -82,9 +82,9 @@ namespace UnitTest
 		{
 			ofstream fout("D:\\GitHub\\autoTransportOOP\\UnitTest\\Out_Bus_Test_Act.txt");
 			Bus act;
-			act.SetmAbstractDT(5);
-			act.SetmData(100);
-			act.SetfuelCons(12);
+			act.setmPower(5);
+			act.setmData(100);
+			act.getmfuelConsumption(12);
 
 			act.Out(fout);
 			fout.close();
@@ -134,7 +134,7 @@ namespace UnitTest
 			ofstream fout("D:\\GitHub\\autoTransportOOP\\UnitTest\\ContainerOutput.txt");
 			Container c;
 			c.In(fin);
-			c.OutBus(fout);
+			c.outBus(fout);
 			fout.close();
 			ifstream fin_exp("D:\\GitHub\\autoTransportOOP\\UnitTest\\OnlyBusExp.txt");
 			ifstream fin_act("D:\\GitHub\\autoTransportOOP\\UnitTest\\ContainerOutput.txt");

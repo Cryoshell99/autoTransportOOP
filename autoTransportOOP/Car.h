@@ -3,14 +3,14 @@
 
 class Car : public Transport
 {
-	int tPower;
-	float fuelConsumption;
+	int mPower;
+	float mfuelConsumption;
 public:
-	void InData(vector<float>& tail); // ввод
+	void inData(vector<float>& tail); // ввод
 	void Out(ofstream& ofst); // вывод
-	float WPRatio();
+	float weightToPowerRatio();
 	Car() {} // создание без инициализации.
 
-	int GettPower() { return tPower; }
-	void SettPower(int tPower) { this->tPower = tPower; }
+	int getmPower() { return mPower; }
+	void setmPower(int mPower) { this->mPower = mPower; }
 };
