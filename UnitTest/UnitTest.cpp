@@ -21,13 +21,31 @@ namespace UnitTest
 	{
 	public:
 		
-		TEST_METHOD(WPRatioM)
+		TEST_METHOD(WPRatioT)
 		{
 			Truck transport;
 			transport.SetmData(25);
 			transport.SetmAbstractDT(25);
 			float actual = transport.WPRatio();
-			float expected = transport.GetmData() / transport.GetmAbstractDT();
+			float expected = transport.GetmAbstractDT() / transport.GetmData();
+			Assert::AreEqual(expected, actual);
+		}
+		TEST_METHOD(WPRatioB)
+		{
+			Bus transport;
+			transport.SetmData(25);
+			transport.SetmAbstractDT(25);
+			float actual = transport.WPRatio();
+			float expected = transport.GetmAbstractDT()*75 / transport.GetmData();
+			Assert::AreEqual(expected, actual);
+		}
+		TEST_METHOD(WPRatioC)
+		{
+			Car transport;
+			transport.SetmData(25);
+			//transport.SetmAbstractDT(25);
+			float actual = transport.WPRatio();
+			float expected = 4*75 / transport.GetmData();
 			Assert::AreEqual(expected, actual);
 		}
 		TEST_METHOD(TestCompareM)
