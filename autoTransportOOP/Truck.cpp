@@ -2,18 +2,28 @@
 
 void Truck::InData(ifstream& ifst)
 {
-	ifst >> mAbstractDT;
 	InCommon(ifst);
+	ifst >> mData;
 };
 
 void Truck::Out(ofstream& ofst)
 {
-	ofst << "It is Truck : carrying capacity = " << mAbstractDT
+	ofst << "It is Truck : carrying capacity = " << mData
 		<< ", ";
 	OutCommon(ofst);
 };
 
-float Truck::WPRatio()
+void Truck::MultiMethod(Transport* other, ofstream& ofst)
 {
-	return (float)(mAbstractDT) / (float)mData;
+	other->MmTruck(ofst);
+};
+
+void Truck::MmBus(ofstream& ofst)
+{
+	ofst << "Bus and Truck." << endl;
+};
+
+void Truck::MmTruck(ofstream& ofst)
+{
+	ofst << "Truck and Truck." << endl;
 };

@@ -21,14 +21,13 @@
   <ItemGroup>
     <ClCompile Include="autoTransportOOP.cpp" />
     <ClCompile Include="Bus.cpp" />
-    <ClCompile Include="Car.cpp" />
     <ClCompile Include="Container.cpp" />
+    <ClCompile Include="Container_MultiMethod.cpp" />
     <ClCompile Include="Transport.cpp" />
     <ClCompile Include="Truck.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bus.h" />
-    <ClInclude Include="Car.h" />
     <ClInclude Include="Container.h" />
     <ClInclude Include="Transport.h" />
     <ClInclude Include="Truck.h" />

@@ -21,9 +21,6 @@
     <ClCompile Include="Bus.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Car.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="Container.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -33,12 +30,12 @@
     <ClCompile Include="Truck.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Container_MultiMethod.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bus.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="Car.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="Container.h">

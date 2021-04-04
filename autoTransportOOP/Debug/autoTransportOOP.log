@@ -1,9 +1,8 @@
-﻿  autoTransportOOP.cpp
-  Bus.cpp
-  Car.cpp
+﻿  Bus.cpp
   Container.cpp
-D:\GitHub\autoTransportOOP\autoTransportOOP\Container.cpp(94,13): warning C4101: temp: неиспользованная локальная переменная
+  Container_MultiMethod.cpp
   Transport.cpp
   Truck.cpp
+  autoTransportOOP.cpp
   Создание кода...
   autoTransportOOP.vcxproj -> D:\GitHub\autoTransportOOP\Debug\autoTransportOOP.exe

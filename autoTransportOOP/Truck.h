@@ -1,13 +1,13 @@
 #pragma once
 #include "Transport.h"
-
 class Truck : public Transport
 {
-	int mAbstractDT;
-	double fuelConsumption;
+	int mData;
 public:
+	virtual void MultiMethod(Transport* other, ofstream& ofst);
+	virtual void MmBus(ofstream& ofst);
+	virtual void MmTruck(ofstream& ofst);
 	void InData(ifstream& ifst); // ввод
 	void Out(ofstream& ofst); // вывод
-	float WPRatio();
 	Truck() {};
 };

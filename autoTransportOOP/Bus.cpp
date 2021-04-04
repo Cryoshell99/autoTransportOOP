@@ -2,23 +2,28 @@
 
 void Bus::InData(ifstream& ifst)
 {
-	ifst >> mAbstractDT;
-	InCommon(ifst);
+	InCommon(ifst); 
+	ifst >> mData;
 };
 
 void Bus::Out(ofstream& ofst)
 {
-	ofst << "It is Bus : passenger capacity = " << mAbstractDT
+	ofst << "It is Bus: passenger capacity = " << mData
 		<< ", ";
 	OutCommon(ofst);
 };
 
-float Bus::WPRatio()
+void Bus::MultiMethod(Transport* other, ofstream& ofst)
 {
-	return (float)(mAbstractDT*75) / (float)mData;
+	other->MmBus(ofst);
 };
 
-void Bus::OutBus(ofstream& ofst)
+void Bus::MmBus(ofstream& ofst)
 {
-	Out(ofst);
+	ofst << "Bus and Bus." << endl;
+};
+
+void Bus::MmTruck(ofstream& ofst)
+{
+	ofst << "Truck and Bus." << endl;
 };
