@@ -21,15 +21,7 @@ int main(int argc, char* argv[])
 	cnt.In(ifst);
 	ofst << "Filled container. " << endl;
 	cnt.Out(ofst);
-
-	// Сортированный вывод
-	ofst << endl << endl << "Soreted container. " << endl;
-	cnt.Sort();
-	cnt.Out(ofst);
-
-	// Фильтрованный вывод
-	cnt.OutBus(ofst);
-
+	cnt.MultiMethod(ofst);
 	cnt.Clear();
 	ofst << "Empty container. " << endl;
 	cnt.Out(ofst);

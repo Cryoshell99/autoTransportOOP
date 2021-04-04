@@ -2,18 +2,33 @@
 
 void Car::InData(ifstream& ifst)
 {
-	ifst >> mAbstractDT;
 	InCommon(ifst);
+	ifst >> mData;
 };
 
 void Car::Out(ofstream& ofst)
 {
-	ofst << "It is Car : max speed = " << mAbstractDT
+	ofst << "It is Car: maximum speed = " << mData
 		<< ", ";
 	OutCommon(ofst);
 };
 
-float Car::WPRatio()
+void Car::MultiMethod(Transport* other, ofstream& ofst)
 {
-	return (float)(4 * 75) / (float)mData;
+	other->MmCar(ofst);
+};
+
+void Car::MmBus(ofstream& ofst)
+{
+	ofst << "Bus and Car." << endl;
+};
+
+void Car::MmTruck(ofstream& ofst)
+{
+	ofst << "Truck and Car." << endl;
+};
+
+void Car::MmCar(ofstream& ofst)
+{
+	ofst << "Car and Car." << endl;
 };

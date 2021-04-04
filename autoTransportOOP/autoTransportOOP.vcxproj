@@ -23,6 +23,7 @@
     <ClCompile Include="Bus.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="Container.cpp" />
+    <ClCompile Include="Container_MultiMethod.cpp" />
     <ClCompile Include="Transport.cpp" />
     <ClCompile Include="Truck.cpp" />
   </ItemGroup>
